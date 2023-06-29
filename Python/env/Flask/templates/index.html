@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raspberry Pi LED Control</title>
+    <script>
+        function toggleLED(state) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', '/toggle?state=' + state, true);
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <h1>Raspberry Pi LED Control</h1>
+    <button onclick="toggleLED('on')">On</button>
+    <button onclick="toggleLED('off')">Off</button>
+</body>
+</html>
